@@ -469,14 +469,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf356676f7ed314bbeaf81b51814edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dicePrefab: {fileID: 641113587924756969, guid: ecb3354d94753404ab69ca604264b303, type: 3}
+  dicePrefab: {fileID: 4083196140885665065, guid: 7f78a25bf3ad71b47ace5b6a35519ac6, type: 3}
   spawnLocation: {fileID: 1862485266}
   throwTarget: {fileID: 1133644317}
   throwSpeed: 9
   throwSpeedVariance: 2
   angularSpeedInThrowDirection: 10
   angularSpeedVariance: 7
-  spaceBetweenDice: 0.7
+  spaceBetweenDice: 0.8
 --- !u!4 &741324538
 Transform:
   m_ObjectHideFlags: 0
