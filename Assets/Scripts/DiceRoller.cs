@@ -16,7 +16,8 @@ public class DiceRoller : MonoBehaviour
     [SerializeField] float angularSpeedVariance = 7f;
     [SerializeField] float spaceBetweenDice = 0.7f;
 
-
+    [Header("Sound")]
+    [SerializeField] AudioSource windUpAudioSource = null;
 
     int numberOfDiceToRoll = 1;
     List<GameObject> currentDice = new List<GameObject>();
@@ -32,13 +33,27 @@ public class DiceRoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            
+        if (Input.GetButtonDown("Jump"))
+        {
+            WindUpRoll();
+        }
+        else if (Input.GetButtonUp("Jump"))
+        {
+            RollDice();
+        }
     }
 
 
 
+    public void WindUpRoll()
+    {
+        windUpAudioSource.Play();
+    }
+
     public void RollDice()
     {
+        windUpAudioSource.Stop();
+
         foreach (GameObject die in currentDice)
         {
             Destroy(die);
